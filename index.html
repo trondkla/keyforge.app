@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Keyforge.app</title>
+  <meta name="description" content="App for managing resources in the card game Keyforge.">
+  <meta name="author" content="Trond Klakken">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="stylesheet" href="styles.css?v=1.0">
+  <link rel="stylesheet" href="amber/amber.css?v=1.0">
+  <link rel="stylesheet" href="chains/chains.css?v=1.0">
+  <link rel="stylesheet" href="keys/keys.css?v=1.0">
+</head>
+
+<body>
+  <main class="main">
+    <section class="amber main-section">
+      <section class="flex">
+        <button class="button minus" id="amber-minus-button">-</button>
+
+        <section class="info">
+          <figure class="figure">
+            <figcaption>Æmber</figcaption>
+            <img src="images/amber.png">
+          </figure>
+          <div id="amber-amount">0</div>
+        </section>
+
+        <button class="button plus" id="amber-plus-button">+</button>
+      </section>
+    </section>
+
+    <section class="keys main-section">
+      <ul class="keylist">
+        <li class="key"><img id="red-key" class="key-image red" src="images/keys/grey.png" /></li>
+        <li class="key"><img id="blue-key" class="key-image blue" src="images/keys/grey.png" /></li>
+        <li class="key"><img id="yellow-key" class="key-image yellow" src="images/keys/grey.png" /></li>
+    </section>
+
+    <section class="chains main-section">
+      <h2>Chain tracker</h2>
+    </section>
+
+    <footer class="footer">
+      <ul class="links">
+        <li class="rules link">
+          <a href="https://images-cdn.fantasyflightgames.com/filer_public/51/f9/51f978e8-a62f-4a53-a246-912893396a05/keyforge_rulebook_v7_for_webcompressed.pdf" target="_blank">Rules</a>
+        </li>
+
+        <li class="restart link">
+          <a id="restart-button" href="#">Start over</a>
+        </li>
+
+        <li class="help link">
+          <a class="help-button" href="#">Help</a>
+        </li>
+      </ul>
+    </footer>
+  </main>
+  <script src="index.js"></script>
+  <script src="keys/keys.js"></script>
+  <script src="amber/amber.js"></script>
+  <script src="chains/chains.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</body>
+</html>
