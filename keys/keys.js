@@ -1,12 +1,17 @@
+keyForged = {
+  'red': false,
+  'blue': false,
+  'yellow': false,
+}
+
 function forgeRender() {
 
-  renderKey("red", keysForged >= 1);
-  renderKey("blue", keysForged >= 2);
-  renderKey("yellow", keysForged >= 3);
+  renderKey("red", keyForged["red"]);
+  renderKey("blue", keyForged["blue"]);
+  renderKey("yellow", keyForged["yellow"]);
 
-  if(keysForged >= 3) {
+  if(keyForged["blue"] && keyForged["red"] && keyForged["yellow"]) {
     alert("You won!");
-    keysForged = 3;
     ga('send', { hitType: 'event', eventCategory: 'Game', eventAction: 'won', eventLabel: 'Usage' });
   }
 }
@@ -21,21 +26,21 @@ function renderKey(color, active) {
   }
 }
 
-function forgeKey() {
+function forgeKey(color) {
+  keyForged[color] = !keyForged[color];
+  
   ga('send', { hitType: 'event', eventCategory: 'Key', eventAction: 'forge', eventLabel: 'Usage' });
-
-  keysForged++;
   forgeRender();
+  decreaseAmber(6);
 }
 
-function deforgeKey() {
-  ga('send', { hitType: 'event', eventCategory: 'Key', eventAction: 'deforge', eventLabel: 'Usage' });
+var redKeyEl = document.getElementById('red-key');
+redKeyEl.addEventListener("click", forgeKey.bind(null, 'red'), false);
 
-  keysForged--;
-  if (keysForged < 0) {
-    keysForged = 0;
-  }
-  forgeRender();
-}
+var blueKeyEl = document.getElementById('blue-key');
+blueKeyEl.addEventListener("click", forgeKey.bind(null, 'blue'), false);
 
-forgeRender();
+var yellowKeyEl = document.getElementById('yellow-key');
+yellowKeyEl.addEventListener("click", forgeKey.bind(null, 'yellow'), false);
+
+// forgeRender();
