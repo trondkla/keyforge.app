@@ -1,6 +1,7 @@
 .amber {
   background: url('../images/amber-background.png') repeat;
   background-size: 270px 270px;
+  max-width: 100%;
 }
 
 .amber .flex {
