@@ -21,14 +21,20 @@ function startOver() {
     amberRender();
     forgeRender();
 
-    ga('send', { hitType: 'event', eventCategory: 'Game', eventAction: 'restart', eventLabel: 'Usage' });
+    gtag('event', 'restart', {
+        'event_category': 'Game',
+        'event_label': 'Usage',
+      });
   }
 }
 
 
 window.onload = function() {
   console.log("On load");
-  ga('send', { hitType: 'event', eventCategory: 'Game', eventAction: 'new game', eventLabel: 'Usage' });
+  gtag('event', 'new game', {
+      'event_category': 'Game',
+      'event_label': 'Usage',
+    });
   var loadingPageOverlay = document.getElementById("loadingPageOverlay");
   loadingPageOverlay.style.visibility = 'hidden';
 
@@ -37,6 +43,9 @@ window.onload = function() {
 
   var rulesButton = document.getElementById("rules-link");
   rulesButton.addEventListener("click", function() {
-    ga('send', { hitType: 'event', eventCategory: 'Game', eventAction: 'rules', eventLabel: 'Usage' });
+    gtag('event', 'rules', {
+        'event_category': 'Game',
+        'event_label': 'Usage',
+      });
   }, false);
 }

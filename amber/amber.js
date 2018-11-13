@@ -7,16 +7,23 @@ function amberRender() {
 function increaseAmber(amount) {
   if (!amount) amount = 1;
   amberAmount = amberAmount + amount;
-  ga('send', { hitType: 'event', eventCategory: 'Amber', eventAction: 'increase', eventLabel: 'Usage' });
-
+  gtag('event', 'increase', {
+      'event_category': 'Amber',
+      'event_label': 'Usage',
+      'value': amberAmount
+    });
   amberRender();
 }
 
 function decreaseAmber(amount) {
   if (!amount) amount = 1;
   amberAmount = amberAmount - amount;
-  ga('send', { hitType: 'event', eventCategory: 'Amber', eventAction: 'decrease', eventLabel: 'Usage' });
-  
+  gtag('event', 'decrease', {
+      'event_category': 'Amber',
+      'event_label': 'Usage',
+      'value': amberAmount
+    });
+
   if (amberAmount <= 0) {
     amberAmount = 0;
   }

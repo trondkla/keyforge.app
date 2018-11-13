@@ -12,7 +12,10 @@ function forgeRender() {
 
   if(keyForged["blue"] && keyForged["red"] && keyForged["yellow"]) {
     alert("You won!");
-    ga('send', { hitType: 'event', eventCategory: 'Game', eventAction: 'won', eventLabel: 'Usage' });
+    gtag('event', 'won', {
+        'event_category': 'Game',
+        'event_label': 'Usage',
+      });
   }
 }
 
@@ -30,16 +33,29 @@ function forgeKey(color) {
   if (!keyForged[color]) {
     if (amberAmount >= 6) {
       decreaseAmber(6);
+      gtag('event', 'forge', {
+          'event_category': 'Key',
+          'event_label': 'Usage',
+          'event_value': color
+        });
     } else {
+      gtag('event', 'missing amber, forge', {
+          'event_category': 'Key',
+          'event_label': 'Usage',
+          'event_value': color
+        });
       alert("You need 6 amber to unlock a key! If you have a card discount, just increase the æmber to 6 first");
       return;
     }
   } else {
     increaseAmber(6);
+    gtag('event', 'deforge', {
+        'event_category': 'Key',
+        'event_label': 'Usage',
+        'event_value': color
+      });
   }
   keyForged[color] = !keyForged[color];
-  
-  ga('send', { hitType: 'event', eventCategory: 'Key', eventAction: 'forge', eventLabel: 'Usage' });
   forgeRender();
 }
 
