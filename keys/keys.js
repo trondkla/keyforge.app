@@ -7,6 +7,7 @@ function forgeRender() {
   if(keysForged >= 3) {
     alert("You won!");
     keysForged = 3;
+    ga('send', { hitType: 'event', eventCategory: 'Game', eventAction: 'won', eventLabel: 'Usage' });
   }
 }
 
@@ -21,13 +22,15 @@ function renderKey(color, active) {
 }
 
 function forgeKey() {
-  console.log("Forge key");
+  ga('send', { hitType: 'event', eventCategory: 'Key', eventAction: 'forge', eventLabel: 'Usage' });
+
   keysForged++;
   forgeRender();
 }
 
 function deforgeKey() {
-  console.log("Deforge key");
+  ga('send', { hitType: 'event', eventCategory: 'Key', eventAction: 'deforge', eventLabel: 'Usage' });
+
   keysForged--;
   if (keysForged < 0) {
     keysForged = 0;

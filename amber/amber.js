@@ -7,6 +7,7 @@ function amberRender() {
 
 function increaseAmber() {
   amberAmount = amberAmount + 1;
+  ga('send', { hitType: 'event', eventCategory: 'Amber', eventAction: 'increase', eventLabel: 'Usage' });
 
   if (amberAmount > 6) {
     amberAmount = 0;
@@ -17,6 +18,8 @@ function increaseAmber() {
 
 function decreaseAmber() {
   amberAmount = amberAmount - 1;
+  ga('send', { hitType: 'event', eventCategory: 'Amber', eventAction: 'decrease', eventLabel: 'Usage' });
+
   if (amberAmount <= 0 && keysForged > 0) {
     amberAmount = 6;
     deforgeKey();
