@@ -1,14 +1,22 @@
 amberAmount = 0;
-keysForged = 0;
 chainLevel = 0;
+keyForged = {};
+
+function resetKeys() {
+  keyForged = {
+    'red': false,
+    'blue': false,
+    'yellow': false,
+  }
+}
 
 function startOver() {
   var sure = confirm("Are you sure you want to reset?");
 
   if(sure) {
     amberAmount = 0;
-    keysForged = 0;
     chainLevel = 0;
+    resetKeys();
 
     amberRender();
     forgeRender();
