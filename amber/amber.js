@@ -4,8 +4,9 @@ function amberRender() {
   amountEl.innerHTML = amberAmount;
 }
 
-function increaseAmber() {
-  amberAmount = amberAmount + 1;
+function increaseAmber(amount) {
+  if (!amount) amount = 1;
+  amberAmount = amberAmount + amount;
   ga('send', { hitType: 'event', eventCategory: 'Amber', eventAction: 'increase', eventLabel: 'Usage' });
 
   amberRender();
