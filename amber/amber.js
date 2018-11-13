@@ -24,10 +24,10 @@ function decreaseAmber(amount) {
 }
 
 var plusButtonEl = document.getElementById("amber-plus-button");
-plusButtonEl.addEventListener("click", increaseAmber, false);
+plusButtonEl.addEventListener("click", increaseAmber.bind(null, 1), false);
 
 
 var minusButtonEl = document.getElementById("amber-minus-button");
-minusButtonEl.addEventListener("click", decreaseAmber, false);
+minusButtonEl.addEventListener("click", decreaseAmber.bind(null, 1), false);
 
 amberRender();
