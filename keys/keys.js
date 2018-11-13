@@ -31,7 +31,12 @@ function forgeKey(color) {
   
   ga('send', { hitType: 'event', eventCategory: 'Key', eventAction: 'forge', eventLabel: 'Usage' });
   forgeRender();
-  decreaseAmber(6);
+  
+  if (keyForged[color]) {
+    decreaseAmber(6);
+  } else {
+    increaseAmber(6);
+  }
 }
 
 var redKeyEl = document.getElementById('red-key');
