@@ -37,23 +37,33 @@
   </div>
   <main class="main">
     <section class="chains main-section">
-      <h2>Chain tracker</h2>
-      <p>Under development...</p>
+      <div class="horizontal-button-flex">
+        <button class="button minus" id="chain-minus-button">-</button>
+
+        <div class="midsection">
+            <h2>Chain tracker</h2>
+
+            <div class="chain-amount" id="chain-amount">0</div>
+            <div id="chain-minus-cards">
+                <div class="amount" id="chain-minus-cards-amount">0</div>
+                <div>Cards</div>
+            </div>
+        </div>
+        <button class="button plus" id="chain-plus-button">+</button>
+      </div>
     </section>
 
-    <section class="keys main-section">
-      <ul class="keylist">
-        <li class="key"><img id="red-key" class="key-image red" src="images/keys/grey.png" /></li>
-        <li class="key"><img id="blue-key" class="key-image blue" src="images/keys/grey.png" /></li>
-        <li class="key"><img id="yellow-key" class="key-image yellow" src="images/keys/grey.png" /></li>
-      </ul>
-    </section>
-      
+    <ul class="keys main-section">
+      <li class="key"><img id="red-key" class="key-image red" src="images/keys/grey.png" /></li>
+      <li class="key"><img id="blue-key" class="key-image blue" src="images/keys/grey.png" /></li>
+      <li class="key"><img id="yellow-key" class="key-image yellow" src="images/keys/grey.png" /></li>
+    </ul>
+
     <section class="amber main-section">
-      <section class="flex">
+      <section class="horizontal-button-flex">
         <button class="button minus" id="amber-minus-button">-</button>
 
-        <section class="info">
+        <section class="info midsection">
           <figure class="figure">
             <figcaption>Æmber</figcaption>
             <img src="images/amber.png">

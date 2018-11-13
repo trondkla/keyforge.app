@@ -4,37 +4,12 @@
   max-width: 100%;
 }
 
-.amber .flex {
-    display: flex;
-    margin: auto;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-}
-
-.amber .info {
-  flex-grow:1;
-  flex-shrink:1;
-  flex-basis:100%;
-}
-
 .amber .info .figure {
   margin-top: 0em;
 }
 
 .amber #amber-amount {
   font-size: 3em;
-}
-
-.amber .button {
-  font-size: 4em;
-  height: 100%;
-  background: rgba(155, 155, 155, 0.1);
-  flex: 2;
-  flex-grow:2;
-  flex-shrink:1;
-  flex-basis:100%;
 }
 
 .amber .button span {

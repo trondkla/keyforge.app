@@ -3,6 +3,40 @@
   background-size: 270px 270px;
 
   border-top: 0.25em solid rgb(138,131,113);
+}
 
-  flex: 3;
+.chains .flex {
+    display: flex;
+    justify-content: center;
+}
+
+.chains .chain-amount {
+    font-size: 4em;
+}
+
+.chains #chain-minus-cards {
+    background: green;
+    padding: 1em;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.chains #chain-minus-cards.card-level-color-0 {
+    background: #aea895;
+}
+.chains #chain-minus-cards.card-level-color--1 {
+    background: #51934d;
+}
+.chains #chain-minus-cards.card-level-color--2 {
+    background: #f4e072;
+}
+.chains #chain-minus-cards.card-level-color--3 {
+    background: #f0a05e;
+}
+.chains #chain-minus-cards.card-level-color--4 {
+    background: #de513f;
+}
+
+.chains #chain-minus-cards .amount {
+    font-size: 3em;
 }

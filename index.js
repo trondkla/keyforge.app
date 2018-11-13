@@ -1,5 +1,6 @@
 amberAmount = 0;
-chainLevel = 0;
+chainAmount = 0;
+chainMinusCards = 0;
 keyForged = {};
 
 function resetKeys() {
@@ -15,11 +16,13 @@ function startOver() {
 
   if(sure) {
     amberAmount = 0;
-    chainLevel = 0;
+    chainAmount = 0;
+    chainMinusCards = 0;
     resetKeys();
 
     amberRender();
     forgeRender();
+    chainRender();
 
     gtag('event', 'restart', {
         'event_category': 'Game',
