@@ -18,6 +18,10 @@ html, body
   box-sizing: border-box;
 }
 
+h2 {
+    margin: 0em;
+}
+
 .main {
   display: flex;
   flex-direction: column;
