@@ -36,13 +36,13 @@ function forgeKey(color) {
       gtag('event', 'forge', {
           'event_category': 'Key',
           'event_label': 'Usage',
-          'event_value': color
+          'value': color
         });
     } else {
       gtag('event', 'missing amber, forge', {
           'event_category': 'Key',
           'event_label': 'Usage',
-          'event_value': color
+          'value': color
         });
       alert("You need 6 amber to unlock a key! If you have a card discount, just increase the æmber to 6 first");
       return;
@@ -52,7 +52,7 @@ function forgeKey(color) {
     gtag('event', 'deforge', {
         'event_category': 'Key',
         'event_label': 'Usage',
-        'event_value': color
+        'value': color
       });
   }
   keyForged[color] = !keyForged[color];
