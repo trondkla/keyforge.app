@@ -16,5 +16,11 @@ function startOver() {
 }
 
 
-var restartButton = document.getElementById("restart-button");
-restartButton.addEventListener("click", startOver, false);
+window.onload = function() {
+  console.log("On load");
+  var loadingPageOverlay = document.getElementById("loadingPageOverlay");
+  loadingPageOverlay.style.visibility = 'hidden';
+
+  var restartButton = document.getElementById("restart-button");
+  restartButton.addEventListener("click", startOver, false);
+}

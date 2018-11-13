@@ -45,3 +45,22 @@ html, body
 .footer .links .link {
 
 }
+
+#loadingPageOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100000;
+
+  background: url('../images/amber-background.png') repeat;
+  background-size: 270px 270px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#loadingPageOverlay .sk-folding-cube .sk-cube:before {
+  background-color: rgba(114, 26, 29, 1.0);
+}
