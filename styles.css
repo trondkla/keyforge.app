@@ -23,10 +23,15 @@ h2 {
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    width: 100%;
 }
 
 .main-section {
@@ -39,9 +44,13 @@ h2 {
 }
 
 .footer .links {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 
   list-style: none;
   margin: 0em;
@@ -55,25 +64,42 @@ h2 {
   font-size: 4em;
   height: 100%;
   background: rgba(155, 155, 155, 0.1);
+
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
   flex: 2;
-  flex-grow:2;
-  flex-shrink:1;
-  flex-basis:100%;
+  -ms-flex-positive:2;
+      flex-grow:2;
+  -ms-flex-negative:1;
+      flex-shrink:1;
+  -ms-flex-preferred-size:100%;
+      flex-basis:100%;
 }
 
 .horizontal-button-flex {
-    display: flex;
     margin: auto;
-    justify-content: space-between;
-    align-items: center;
     height: 100%;
     width: 100%;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
 }
 
 .horizontal-button-flex .midsection {
+    -webkit-box-flex:1;
+    -ms-flex-positive:1;
     flex-grow:1;
-    flex-shrink:1;
-    flex-basis:100%;
+    -ms-flex-negative:1;
+        flex-shrink:1;
+    -ms-flex-preferred-size:100%;
+        flex-basis:100%;
 }
 
 #loadingPageOverlay {
@@ -87,9 +113,15 @@ h2 {
   background: url('../images/amber-background.png') repeat;
   background-size: 270px 270px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
 }
 #loadingPageOverlay .sk-folding-cube .sk-cube:before {
   background-color: rgba(114, 26, 29, 1.0);
@@ -101,6 +133,6 @@ input[type="text"],
 input[type="button"],
 input[type="submit"],
 .input-checkbox {
--webkit-appearance: none;
-border-radius: 0;
+    -webkit-appearance: none;
+    border-radius: 0;
 }
