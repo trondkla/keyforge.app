@@ -27,7 +27,7 @@ function renderKey(color, active) {
 }
 
 function forgeKey(color) {
-  if (keyForged[color]) {
+  if (!keyForged[color]) {
     if (amberAmount >= 6) {
       decreaseAmber(6);
     } else {
