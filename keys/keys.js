@@ -27,16 +27,20 @@ function renderKey(color, active) {
 }
 
 function forgeKey(color) {
+  if (keyForged[color]) {
+    if (amberAmount >= 6) {
+      decreaseAmber(6);
+    } else {
+      alert("You need 6 amber to unlock a key! If you have a card discount, just increase the æmber to 6 first");
+      return;
+    }
+  } else {
+    increaseAmber(6);
+  }
   keyForged[color] = !keyForged[color];
   
   ga('send', { hitType: 'event', eventCategory: 'Key', eventAction: 'forge', eventLabel: 'Usage' });
   forgeRender();
-  
-  if (keyForged[color]) {
-    decreaseAmber(6);
-  } else {
-    increaseAmber(6);
-  }
 }
 
 var redKeyEl = document.getElementById('red-key');
