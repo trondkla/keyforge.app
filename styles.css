@@ -61,6 +61,8 @@ h2 {
   
   display: inline-block;
   width: 35%;
+	
+  padding: 0em; /* safari adds padding:1em */
 }
 
 .horizontal-button-flex {
