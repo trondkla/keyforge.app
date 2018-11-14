@@ -58,10 +58,9 @@ h2 {
   font-size: 4em;
   height: 100%;
   background: rgba(155, 155, 155, 0.1);
-  flex: 2;
-  flex-grow:2;
-  flex-shrink:1;
-  flex-basis:100%;
+  
+  display: inline-block;
+  width: 35%;
 }
 
 .horizontal-button-flex {
@@ -74,9 +73,8 @@ h2 {
 }
 
 .horizontal-button-flex .midsection {
-    flex-grow:1;
-    flex-shrink:1;
-    flex-basis:100%;
+    display: inline-block;
+	  width: 30%;
 }
 
 #loadingPageOverlay {
