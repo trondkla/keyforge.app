@@ -61,7 +61,8 @@ h2 {
   
   display: inline-block;
   width: 35%;
-	
+
+  border: 0px none;
   padding: 0em; /* safari adds padding:1em */
 }
 
