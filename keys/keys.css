@@ -13,19 +13,17 @@
   margin: 0 auto;
   list-style: none;
   width: 100%;
-  height: 10em;
   flex: none;
 }
 
 .key {
-  padding: 1em;
+  padding: 0.5em;
 }
 .key img {
   max-width: 100%;
   max-height: 100%;
   height: auto;
-  min-height: 5em;
-  min-width: 5em;
+  width: auto;
 }
 
 @media only screen
