@@ -1,7 +1,8 @@
 .amber {
   background: url('../images/amber-background.png') repeat;
   background-size: 270px 270px;
-  max-width: 100%;
+
+  border-top: 0.25em solid rgb(138,131,113);
 }
 
 .amber .info .figure {
@@ -14,4 +15,11 @@
 
 .amber .button span {
   background: #f0f0f0;
+}
+
+@media only screen
+  and (max-device-width: 640px) {
+  .amber #amber-amount {
+    font-size: 3em;
+  }
 }

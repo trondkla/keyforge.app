@@ -27,3 +27,19 @@
   min-height: 5em;
   min-width: 5em;
 }
+
+@media only screen
+  and (max-device-width: 640px) {
+
+  .keys {
+      height: 6em;
+  }
+  .key {
+    margin: 0.5em;
+  }
+
+  .key img {
+      min-width: auto;
+      min-height: auto;
+  }
+}
